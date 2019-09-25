@@ -43,6 +43,18 @@
           width: auto;
           height: auto;
       }
+
+@media screen and (min-width: 768px) {
+  h2.headertext {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2.headertext {
+    font-size: 50px;
+  }
+}
   </style>
 </head>
 
@@ -80,7 +92,7 @@
       <div class="banner_inner d-flex align-items-center">
           <div class="container">
               <div class="banner_content text-center">
-                  <h2 style = "font-family:Kozelf;text-transform:capitalize;font-size:100px;">Amberly East</h2>
+                  <h2 id="headertext" style="font-family:Kozelf;text-transform:capitalize;font-size:100px;">Amberly East</h2>
               </div>
           </div>
       </div>
