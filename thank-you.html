@@ -2,21 +2,38 @@
 <html lang="en">
 <head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149868871-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149868871-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-149868871-3');
+    </script>
+        
+    <script type="text/javascript">
+        //$('#modelname').html(getUrlParameter('model'));
+        function writemodel() {
+            var urlParams = new URLSearchParams(location.search);
+            modelname = urlParams.get('model');
+            modelusername = urlParams.get('add')
+            if (modelname) {
+                addmodel = "<h1 style='padding-top: 100px; text-align: center; font-size: 30px;'>To get added as soon as possible to " + modelname + "'s Snapchat, take a screenshot of your purchase and message it to the model on her Premium Snapchat: <span style='color:#be46be'>" + modelusername + "</span></h1>";
+                document.getElementById("modelname").innerHTML = addmodel;
+                thankyou = "<h1 id='thankyou' style='padding-top: 20px; text-align: center; font-size: 30px;'>or fill out the form below to be added automatically:</h1>";
 
-  gtag('config', 'UA-149868871-3');
-</script>
-
+                document.getElementById("thankyou").innerHTML = thankyou;
+                document.getElementById("thankyou").style.paddingTop='20px';
+                document.getElementById("thankyou").style.fontSize='30px';
+            }
+        }
+        window.onload = writemodel
+    </script>
 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Amberly East - VIP Fans</title>
+	<title>Thank you - VIP Fans</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -104,19 +121,16 @@
       <div class="row">
         <div class="offset-xl-1 col-xl-10">
           <div class="portfolio_details_inner">
-            <div class="row">
-              <div class="col-12">
-                  
-              </div>
-            </div>
-
-           <h1 style="padding-top: 100px; text-align: center;">Thank you for your purchase! Please enter your information below to be added to the Snapchat in 24h.</h1>
+              <div ></div>
+              
+           <h1 id="modelname"></h1>
+           <h1 id="thankyou" style="padding-top: 100px; text-align: center; font-size: 40px;">Thank you for your purchase! Please enter your information below to be added to the Snapchat in 24h.</h1>
             
           </div>
         </div>
       </div>
 	  
-        <div clas="row" style="padding-top: 50px;">
+        <div id="form" clas="row" style="padding-top: 50px;">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwN0bRjrmwYO3ztwSMWAMTsusMVQcFh4ItKQj0ssYlPgLO1Q/viewform?embedded=true" width="375" height="666" frameborder="0" marginheight="0" marginwidth="0" style="margin-left: auto; margin-right: auto; display: block;">Loading…</iframe>
             
         </div>
